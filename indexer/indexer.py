@@ -1,8 +1,11 @@
+# INDEXER
+# usage: copy indexer.py into directory of target files and run `python3 indexer.py > index.html`
+
 import os
 import urllib.parse
 
 basepath = '.'
-blocked_files = ['index.html', 'refresh.py', '.refresh.py.swp']
+blocked_files = ['index.html', 'indexer.py', '.indexer.py.swp']
 index_html = """
 <!DOCTYPE html>
 <html lang="en">
