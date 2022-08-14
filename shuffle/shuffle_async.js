@@ -53,7 +53,7 @@ var randomize_video = (_) => {
 var length_last = 0;
 var verify_on = true;
 var verify_attempts = 0;
-var verify_attempts_req = 10;
+var verify_attempts_req = 5;
 var verify_callback = (_) => {
     var verified = length_last === video_files.length;
     // console.log(video_files.length, verified, verify_attempts);
@@ -61,16 +61,17 @@ var verify_callback = (_) => {
     return verified;
 };
 var done_callback = randomize_video;
-setInterval((_) => {
+var verify_interval = setInterval((_) => {
     if (verify_on) {
         if (verify_callback()) verify_attempts++;
         else verify_attempts = 0;
         if (verify_attempts >= verify_attempts_req) {
             verify_on = false;
+            clearInterval(verify_interval);
             done_callback();
         }
     }
-}, 20);
+}, 15);
 
 process_path(dir_path, video_files, verify_callback);
 
