@@ -1,0 +1,22 @@
+{
+  "name": "repetition",
+  "version": "1.0.0",
+  "description": "Scripts for various repetitive tasks (file renaming, file shuffling, file listing).",
+  "main": "shuffle/shuffle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anuvgupta/repetition.git"
+  },
+  "author": "Anuv Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anuvgupta/repetition/issues"
+  },
+  "homepage": "https://github.com/anuvgupta/repetition#readme",
+  "dependencies": {
+    "open": "^8.4.0"
+  }
+}
