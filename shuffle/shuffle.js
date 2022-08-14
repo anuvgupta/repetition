@@ -1,5 +1,6 @@
 var fs = require("fs");
 var path = require("path");
+var open = require("open");
 
 var args = process.argv.slice(2);
 if (args.length < 1 || args.length > 2) {
@@ -49,3 +50,4 @@ var selected_index = rand_int(0, video_files.length - 1);
 var selected_path = video_files[selected_index];
 
 console.log(selected_path);
+open(selected_path);
