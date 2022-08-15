@@ -1,1 +1,1 @@
-node /Users/anuv/Documents/Code/GitHub/tools/repetition/shuffle/shuffle.js "$@"
+/usr/local/bin/node /Users/anuv/Documents/Code/GitHub/tools/repetition/shuffle/shuffle.js "$@"
